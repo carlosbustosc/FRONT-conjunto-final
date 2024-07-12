@@ -1,0 +1,47 @@
+.contenedor_ingreso {
+    width: auto;
+    display: flex;
+    float: right;
+    align-items: center;
+    height: 63px;
+    margin-right: 66px;
+}
+
+.ingreso_usuario_ltsx {
+    width: 38px;
+}
+
+.texto-bienvenido {
+    color: #d40050;
+    margin-left: 14px;
+    font-size: 17px;
+}
+
+.cerra_sesion {
+    color: #d40050;
+    margin-left: 14px;
+    font-size: 17px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+@media(max-width:650px){
+
+    .contenedor_ingreso {
+        width: 100%;
+        display: table;
+        text-align: center;
+        margin-right: 0;
+        height: 43px;
+    }
+
+    .ingreso_usuario_ltsx {
+        width: 30px;
+    }
+
+    .texto_ingreso {
+        font-size: 14px;
+        padding-top: 12px;
+    }
+}

@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container-fluid contenedor_principal_home quitar_padding">
+    <div class="row quitar_padding">
+        <div class="col-md-9 quitar_padding">
+            <div class="contenedor_imagen_fondo"></div>
+        </div>
+        <div class="col-md-3">
+            <div class="contenedor_formulario">
+                <div class="base_informacion">
+                    <div class="contenedor_logo">
+                        <img src="./assets/img/abundaralogo.png" class="logo_vivienda">
+                    </div>
+
+
+                    <form class="formulario" [formGroup]="registro" (ngSubmit)="enviarFormulario()">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Escriba su nombre" formControlName="nombre" />
+                            <small class="text-danger" *ngIf="nombreVacio">Escriba nombre completo</small>
+                        </div>
+                        <div class="mb-3">
+
+                            <input type="text" class="form-control" placeholder="Escriba su correo" formControlName="correo" />
+                            <small class="text-danger" *ngIf="correoVacio">Escriba correo completo</small>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Escriba su contraseña" formControlName="pass1" />
+                            <small class="text-danger" *ngIf="passVacio">Escriba contraseña</small>
+                        </div>
+                        <div class="mb-3">
+
+                            <input type="password" class="form-control" placeholder="Repita su contraseña" formControlName="pass2" />
+                            <small class="text-danger" *ngIf="pass2Vacio">Escriba contraseña</small>
+                        </div>
+                        <div class="base_boton">
+                            <button type="submit" class="boton_de_ingreso">Registrar</button>
+
+                            <small class="texto-registro" routerLink="/login">¿ya esta registrado? - Ingresar</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

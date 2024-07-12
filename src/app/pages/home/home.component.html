@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-7 fondo_home quitar_padding-left">
+            <div class="contenedor_imagen"></div>
+        </div>
+        <div class="col-md-5">
+            <div class="contenedor_principal_home">
+                <div class="base_contenido">
+                    <img src="./assets/img/abundaralogo.png" class="logo_vivienda">
+                    <div class="contenedor_botones">
+                        <div class="base_boton_lst" (click)="propietarios()">
+                            <img src="./assets/img/propietarios.png" class="tamaño_imagen" />
+                            <p class="texto_ingreso">PROPIETARIOS</p>
+                        </div>
+
+                        <div class="base_boton_lst left_lts" (click)="agregar_nuevo()">
+                            <img src="./assets/img/agregar.png" class="tamaño_imagen " />
+                            <p class="texto_ingreso">AGREGAR NUEVO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container-fluid contenedor_principal_home quitar_padding">
+    <div class="row quitar_padding">
+        <div class="col-md-9 quitar_padding-left">
+            <div class="contenedor_imagen_fondo"></div>
+        </div>
+        <div class="col-md-3 quitar_padding">
+            <div class="contenedor_formulario">
+                <div class="base_informacion">
+                    <div class="contenedor_logo">
+                        <!--<img src="http://conjuntocerradoabundara.com/wp-content/uploads/2020/10/abundaralogo.png" class="logo_vivienda">-->
+                        <img src="./assets/img/abundaralogo.png" class="logo_vivienda">
+                    </div>
+
+                    <form class="formulario" [formGroup]="formulario" (ngSubmit)="formLogin()">
+                        <div class="mb-3">
+                            <label class="texto_ingreso">Escriba su correo</label>
+                            <input type="email" class="form-control" placeholder="Escriba su correo" formControlName="email" />
+                            <small class="text-danger" *ngIf="emailVacio">Escriba su correo completo</small>
+                        </div>
+                        <div class="mb-3">
+                            <label class="texto_ingreso">Escriba su contraseña</label>
+                            <input type="password" class="form-control" placeholder="Escriba su correo" formControlName="password" />
+                            <small class="text-danger" *ngIf="passVacio">Escriba su contraseña</small>
+
+                            <div class="base_boton">
+                                <button type="submit" class="boton_de_ingreso">Ingresar</button>
+                            </div>
+
+                            <small class="texto-registro" routerLink="/registro">¿no tiene usuario? - Registrarse</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

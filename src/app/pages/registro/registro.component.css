@@ -1,0 +1,94 @@
+.contenedor_imagen_fondo {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images.ctfassets.net/8lc7xdlkm4kt/PXZEiwmwLUKVStaUqaKlf/2c5f62ded60be34c13e5f2f4546bda48/1.Life72-Apto-53-m2.jpg?w=1366&q=60');
+    padding: 0px;
+    background-size: cover;
+}
+
+input::placeholder {
+    color: #d4005094;
+}
+
+small.texto-registro {
+    text-align: center;
+    color: #d40050;
+    text-decoration: underline;
+    font-size: 16px;
+    position: relative;
+    top: 17px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+
+
+
+@media(max-width:650px){
+
+    .contenedor_imagen_fondo{
+
+        display: none;
+    }
+
+    button.boton_de_ingreso {
+        width: 130px;
+        height: 130px;
+        font-size: 19px;
+    }
+
+    form.formulario {
+        padding: 20px 40px;
+    }
+
+    .logo_vivienda {
+        width: 216px;
+       
+    }
+
+    .contenedor_formulario {
+        width: 100%;
+        height: 90vh;
+    }
+
+}
+
+
+@media(max-width:385px){
+
+}
+
+@media(max-width:365px){
+
+    .logo_vivienda {
+        width: 186px;
+    }
+
+    button.boton_de_ingreso{
+        width: 120px;
+        height: 120px;
+        font-size: 18px;
+    }
+
+
+}
+
+
+@media(max-width:345px){
+
+    form.formulario{
+        padding: 20px;
+    }
+
+    .logo_vivienda {
+        width: 162px;
+    }
+
+    button.boton_de_ingreso {
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
+    }
+
+
+}

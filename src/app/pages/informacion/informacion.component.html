@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid contenedor_principal_home quitar_padding">
+    <div class="row quitar_padding">
+
+        <div class="col-md-6 quitar_padding foto_fondo_ltsx">
+            <!--<div class="contenedor_imagen_fondo"></div>-->
+        </div>
+
+        <div class="col-md-6">
+            <img src="./assets/img/volver.png" class="logo_volver" (click)="volver_tabla()">
+            <div class="contenedor_formulario">
+                <div class="base_informacion">
+                    <div class="contenedor_logo">
+                        <img src="./assets/img/abundaralogo.png" class="logo_vivienda">
+                        <h1 class="ingresa_un_registro_nuevo">Información del propietario</h1>
+                    </div>
+
+                    <div class="contenedor_informacion_ltsx">
+                        <h1 class="nombre"> {{ informacionPersona.nombre }}</h1>
+                        <h2 class="nombre2"> Torre {{ informacionPersona.torre }} - Apatamento {{ informacionPersona.apartamento }}</h2>
+
+                        <hr>
+                        <p class="estilo_texto_ltsx"><span class="titular">edad: </span> {{ informacionPersona.edad }}</p>
+                        <p class="estilo_texto_ltsx"><span class="titular">Numero de cedula: </span> {{ informacionPersona.cedula }} </p>
+                        <p class="estilo_texto_ltsx"><span class="titular">Correo electronico: </span> {{ informacionPersona.correo }} </p>
+                        <p class="estilo_texto_ltsx"><span class="titular">Contacto: </span> {{ informacionPersona.celular }} </p>
+                        <p class="estilo_texto_ltsx"><span class="titular">¿Tiene parqueadero? </span> {{ informacionPersona.parqueadero }} </p>
+
+                        <p class="estilo_texto_ltsx"><span class="titular">Deuda Acumulada </span> {{ informacionPersona.deuda
+                        }} </p>
+                        
+                        <p class="estilo_texto_ltsx"><span class="titular">Deuda Total </span> {{ informacionPersona.total
+
+                        }} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

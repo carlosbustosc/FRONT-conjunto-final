@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+
+<div class="contenedor_deuda" *ngIf="cerrarDeuda">
+    <form class="formulario_deuda" (ngSubmit)="registrar_deuda( f )" #f="ngForm">
+
+        <p class="icono_cerrar_deuda" (click)="icono_cerrar()">x</p>
+
+        <h1 class="deuda_administracion">Deuda Administracion 2023</h1>
+
+        <div class="contenedor_deuda_ltsx" *ngIf="mostrarFomulario">
+            <hr class="linea_deuda_lts">
+            <div class="mb-3">
+                <label class="texto_indicativo" [(ngModel)]="detalleDeuda.id">id</label>
+                <input type="text" class="form-control" name="id"  readOnly [(ngModel)]="formularioDeuda.id" />
+            </div>
+
+            <div class="mb-3">
+                <label class="texto_indicativo">Meses de mora</label>
+                <select class="form-select"  (change)="sumar_deuda( $event )">
+                    <option value="0">Seleccionar Mes </option>
+                    <option value="120000">1</option>
+                    <option value="240000">2</option>
+                    <option value="360000">3</option>
+                    <option value="480000">4</option>
+                    <option value="600000">5</option>
+                    <option value="720000">6</option>
+                    <option value="840000">7</option>
+                    <option value="960000">8</option>
+                    <option value="1080000">9</option>
+                    <option value="1200000">10</option>
+                    <option value="1320000">11</option>
+                    <option value="1440000">12</option>
+                </select>  
+            </div>
+
+            <div class="mb-3">
+                <label class="texto_indicativo" disabled>Deuda Acumulada</label>
+                <input type="text" class="form-control" name="anterior"  readOnly   [(ngModel)]="formularioDeuda.anterior"/>
+            
+            </div>
+
+            <div class="mb-3">
+                <label class="texto_indicativo">Deuda Total</label>
+                <input type="text" class="form-control"  name="total" readOnly  [(ngModel)]="formularioDeuda.total"/>
+                
+            </div>
+        </div>
+
+        <div class="contenedor_deuda2_ltsx" *ngIf="mostrarDetalle">
+            <p>Deuda Anterior: {{ detalleDeuda.anterior }}</p>
+            <p>Deuda Total: {{ detalleDeuda.total }}</p>
+        </div>
+
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-danger">Registrar Deuda</button> 
+            </div>
+    </form>
+</div>
+
+
+
+
+
+<div class="container">
+    <img src="./assets/img/volver.png" class="logo_volver" (click)="volver_home()">
+    <img src="./assets/img/abundaralogo.png" class="logo_vivienda">
+    <h1 class="titulo_resgitros_ltsx">Registros propietarios conjunto residencial</h1>
+    <hr class="linea_divisora">
+    <button class="registrar_nuevo btn btn-primary" (click)="agregar_nuevo()">Agregar Nuevo</button>
+
+    <div class="contenido_tablas">
+        <div class="fila_informacion btn" *ngFor="let personas of propietariosRegistrados; let i = index" id="{{i}}">
+            <div class="base_1_tabla">
+                <p class="nombre_propietario">{{ personas.nombre }}</p>
+            </div>
+            <div class="base_2_tabla">
+                <a class="actualizar_registro" (click)="ver_informacion( personas._id )">Ver información</a>
+            </div>
+            <div class="base_3_tabla">
+                <a class="actualizar_registro" (click)="actualizar( personas._id )">Editar registro</a>
+            </div>
+            <div class="base_4_tabla">
+                <a class="actualizar_registro" (click)="borrarRegistro( personas._id, i )">Borrar registro</a>
+            </div>
+            <div class="base_5_tabla">
+                <a class="actualizar_registro borrar_resg" (click)="abrirDeuda( personas._id )">Adminstrar deuda</a>
+            </div>
+        </div>
+    </div>
+
+</div>

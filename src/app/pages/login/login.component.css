@@ -1,0 +1,82 @@
+.contenedor_imagen_fondo {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images.ctfassets.net/8lc7xdlkm4kt/6bYolzLQSPgZawCDlHb9qr/ca35368f17fc3143fe969c9b074a73de/mint-apartamentos-barranquilla-sala.jpg');
+    padding: 0px;
+    background-size: cover;
+}
+
+input::placeholder {
+    color: #d4005094;
+}
+
+small.texto-registro {
+    text-align: center;
+    color: #d40050;
+    text-decoration: underline;
+    font-size: 16px;
+    position: relative;
+    top: 17px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+
+
+
+
+
+@media( max-width:650px ){
+
+    .contenedor_imagen_fondo {
+        display: none;
+    }
+
+    .contenedor_formulario {
+        width: 100%;
+        height: 90vh;
+    }
+    
+}
+
+@media( max-width:385px ){
+
+    form.formulario {
+        padding: 20px 30px;
+    }
+
+    .boton_de_ingreso {
+        width: 130px;
+        height: 130px;
+    }
+
+    .logo_vivienda {
+        width: 201px;
+    }
+
+    
+
+
+}
+
+
+@media( max-width:365px ){
+
+    .boton_de_ingreso {
+        width: 110px;
+        height: 110px;
+        font-size: 18px;
+    }
+    
+}
+
+
+@media( max-width:345px ){
+
+    .boton_de_ingreso {
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+    }
+
+}

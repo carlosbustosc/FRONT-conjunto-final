@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid contenedor_principal_home quitar_padding">
+    <div class="row quitar_padding">
+
+        <div class="col-md-6 quitar_padding">
+            <div class="contenedor_imagen_fondo"></div>
+        </div>
+
+        <div class="col-md-6">
+            <img src="./assets/img/volver.png" class="logo_volver" (click)="volver_table()">
+            <div class="contenedor_formulario">
+                <div class="base_informacion">
+                    <div class="contenedor_logo">
+                        <img src="./assets/img/abundaralogo.png" class="logo_vivienda">
+                        <h1 class="ingresa_un_registro_nuevo">Actualice un propietario</h1>
+                    </div>
+
+                    <form class="formulario" [formGroup]="formularioEditar" (ngSubmit)="enviarActualizacion()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Nombre del propietario" formControlName="actualizarNombre" />
+                                    <small class="text-danger" *ngIf="errorNombre">Escriba nombre completo</small>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Edad" formControlName="actualizarEdad" />
+                                    <small class="text-danger" *ngIf="errorEdad">Escriba la edad</small>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Numero de cedula" formControlName="actualizarCedula" />
+                                    <small class="text-danger" *ngIf="errorCedula">Escriba las cedula minimo 6 digitos</small>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Correo Electronico" formControlName="actualizarCorreo" />
+                                    <small class="text-danger" *ngIf="errorCorreo">Escriba el correo</small>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Contacto" formControlName="actualizarContacto" />
+                                    <small class="text-danger" *ngIf="errorCelular">Escriba numero de celular</small>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Torre" formControlName="actualizarTorre" />
+                                    <small class="text-danger" *ngIf="errorTorre">Escriba numero de torre</small>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Apartamento" formControlName="actulizarApartamento" />
+                                    <small class="text-danger" *ngIf="errorApartamento">Escriba numero de apartamento</small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select class="form-select" formControlName="actulizarParqueadero">
+                                        <option>Parqueadero</option>
+                                        <option value="si">si</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <small class="text-danger" *ngIf="errorParqueadero">Seleccione una opcion</small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="texto_indicativo" style="color:#b23a54">Deuda Acumulada Admnistracion</label>
+                                    <select class="form-select" formControlName="actulizarDeuda">
+                                        <option></option>
+                                        <option value="0">Esta al dia</option>
+                                        <option value="120000">1 mes $120.000</option>
+                                        <option value="230000">2 meses $230.000</option>
+                                        <option value="360000">3 meses $360.000</option>
+                                        <option value="480000">4 meses $480.000</option>
+                                        <option value="600000">5 meses $600.000</option>
+                                        <option value="720000">6 meses $720.000</option>
+                                        <option value="840000">7 meses $840.000</option>
+                                        <option value="960000">8 meses $960.000</option>
+                                        <option value="1080000">9 meses $1080.000</option>
+                                        <option value="1200000">10 meses $1200.000</option>
+                                        <option value="1320000">11 meses $1320.000</option>
+                                        <option value="1440000">12 meses $1440.000</option>
+                                    </select>
+                                    <small class="text-danger" *ngIf="errorDeuda">Escriba la deuda anterior</small>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="base_boton">
+                            <button type="type" class="boton_de_ingreso">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
