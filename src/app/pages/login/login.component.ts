@@ -63,6 +63,8 @@ export class LoginComponent implements OnInit {
       })
       
     }else{
+
+
       console.log(this.formulario);
 
 
@@ -75,16 +77,17 @@ export class LoginComponent implements OnInit {
                
               }, (err=> {
                   
-                console.log(err.error.error.message)
+
+                console.log(err.error.mensaje)
                 
 
-                if( err.error.error.message == "EMAIL_NOT_FOUND" ){
+                if( err.error.mensaje == "el correo no existe" ){
 
                   alert("El email no es valido")
                 }
 
 
-                if( err.error.error.message == "INVALID_PASSWORD" ){
+                if( err.error.mensaje == "la contraseña es incorrecta" ){
 
                   alert("La contraseña no es valida")
                 }

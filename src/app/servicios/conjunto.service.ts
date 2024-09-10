@@ -58,6 +58,8 @@ autenticarLogin( formularioLogin:any ){
 
   }
 
+  console.log(login)
+
   return this.usarHttp.post("https://back-natura.onrender.com/login", login)
           .pipe(
             map( (resp:any ) => {

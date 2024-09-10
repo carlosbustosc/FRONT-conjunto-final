@@ -44,4 +44,18 @@
         font-size: 14px;
         padding-top: 12px;
     }
+
+    .texto-bienvenido{
+        color: #d40050;
+        margin-left: 14px;
+        font-size: 17px;
+        width: 100%;
+        display: block;
+    }
+
+    .cerra_sesion{
+        margin-bottom: 18px;
+        display: inline-block;
+    }
+
 }
