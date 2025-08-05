@@ -71,9 +71,10 @@ export class LoginComponent implements OnInit {
       this.conectarServicio.autenticarLogin( this.formulario )
               .subscribe( (respLogin) => {
               
-                console.log( respLogin );
-
-                this.usarRuta.navigate( [ '/home' ] )
+             
+               localStorage.setItem('nombreAdmin', respLogin.respuestaBaseDatos.nombre)
+                
+                this.usarRuta.navigate( [ '/home' ])
                
               }, (err=> {
                   

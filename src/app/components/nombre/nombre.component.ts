@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 /*---conectar servicio---*/
 import { ConjuntoService } from '../../servicios/conjunto.service';
@@ -16,29 +16,17 @@ import { Router } from "@angular/router"
 })
 export class NombreComponent implements OnInit {
 
-  nombrePersona:string = ""
+
+  @Input() nombreADMIN:any
+
 
   constructor(private usarRuta:Router, private conectarServicio:ConjuntoService ) { }
 
   ngOnInit(): void {
 
-    /*----traer nombre----*/
-    console.log( this.conectarServicio.guardarNombre );
-
-
-    if (window.matchMedia("(max-width: 600px)").matches) {
   
-       /* La pantalla tiene menos de 600 píxeles de ancho */
-       this.nombrePersona = this.conectarServicio.guardarNombre;
-      
-    } else {
-      
-       /* La pantalla tiene al menos 600 píxeles de ancho */
-       this.nombrePersona = ""
-    }
 
   
-    
       
 
   }

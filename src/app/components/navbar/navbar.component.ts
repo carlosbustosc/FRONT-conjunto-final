@@ -14,9 +14,24 @@ export class NavbarComponent implements OnInit {
   mostrarIngreso = false;
   nombrePersona:string  = ""
 
+  nombreAdministrador:any
+
   constructor(private conectarServicio:ConjuntoService ) { }
 
   ngOnInit(): void {
+
+  
+    if( localStorage.getItem('nombreAdmin') ){
+        
+       this.nombreAdministrador = localStorage.getItem('nombreAdmin');
+       console.log(this.nombreAdministrador)
+   
+      }else{
+
+        this.nombreAdministrador = ""
+    }
+   
+
 
     if( localStorage.getItem( 'token' ) ){
       
