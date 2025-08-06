@@ -50,11 +50,12 @@
     }
 
     .texto-bienvenido{
-        color: #d40050;
-        margin-left: 14px;
+        color: #ffffff;
         font-size: 17px;
-        width: 100%;
+        width: 87%;
         display: block;
+        margin: 22px auto 14px auto;
+        line-height: 23px;
     }
 
     .cerra_sesion{

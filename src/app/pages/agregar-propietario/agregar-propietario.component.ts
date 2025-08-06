@@ -49,7 +49,10 @@ export class AgregarPropietarioComponent implements OnInit {
 
   /*--------validacion visual-------------*/
   get errorNombre(){
+
+ 
     return this.NuevoRegistro.controls['nombre'].invalid && this.NuevoRegistro.controls['nombre'].touched;
+    
   }
 
   get errorEdad(){
@@ -93,6 +96,7 @@ export class AgregarPropietarioComponent implements OnInit {
       Object.values( this.NuevoRegistro.controls ).forEach( valores => {
         
         valores.markAsTouched();
+
 
       })
 

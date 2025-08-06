@@ -106,6 +106,7 @@ export class PropietariosComponent implements OnInit {
   volver_home(){
 
     this.usarRuta.navigate( ['/home'] );
+  
   }
 
 
@@ -121,6 +122,8 @@ export class PropietariosComponent implements OnInit {
   /*-----borrar registro------*/
   borrarRegistro( id:any, i:number ){
     
+
+   this.propietariosRegistrados.splice(1, 0)
 
     Swal.fire({
       title: '¿Esta seguro?',
